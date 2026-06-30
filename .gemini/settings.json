@@ -1,5 +1,10 @@
 {
   "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres",
+               "postgresql://postgres:yjLE5uyC2ODVdKoH@db.djxfiwfpvwsqxtjaommb.supabase.co:5432/postgres"]
+    },
     "superset-mcp": {
       "command": "npx",
       "args": ["-y", "superset-mcp"],
@@ -7,13 +12,6 @@
         "SUPERSET_BASE_URL": "http://localhost:8088",
         "SUPERSET_USERNAME": "admin",
         "SUPERSET_PASSWORD": "admin"
-      }
-    },
-    "brave-search": {
-      "command": "npx",
-      "args": ["-y", "@brave/brave-search-mcp-server", "--transport", "stdio"],
-      "env": {
-        "BRAVE_API_KEY": "BSA***********"
       }
     }
   }
